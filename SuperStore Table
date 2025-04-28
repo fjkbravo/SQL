@@ -26,24 +26,27 @@ VALUES
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
 
 
+#The following will show basic stats/queries based off data entries above
 
-
---Orders the item by price
+--Show a list of items by price in ascending order?
 Select item_name, price
 FROM superstore
 order by price
 ;
---Own SQL that shows Statistic about item price
+
+--Query that shows the Maximum price and item(including category) from Electronic products?
 select MAX(price), item_name, category
 from superstore
 where category = 'Electronics'
 ;
---Query stat about the price for items in Kitchen Supplies
-select MIN(price), item_name, category
+
+--Query that shows the Average price for Kitchen Supplies products?
+select AVG(price), category
 from superstore
 where category = 'Kitchen Supplies'
 ;
---How many items of each product in furnishings?
+
+--How many items in stock for each product in furnishings?
 select stock_quantity, item_name
 from superstore
 where category = 'Furnishings'
