@@ -46,8 +46,9 @@ from superstore
 where category = 'Kitchen Supplies'
 ;
 
---How many items in stock for each product in furnishings?
+--How many items in stock for each product in furnishings and alphabetized?
 select stock_quantity, item_name
 from superstore
 where category = 'Furnishings'
+order by item_name
 ;
